@@ -3,6 +3,7 @@ from decouple import config
 from binance.client import Client
 from binance.enums import *
 
+#### This Is Bot
 SOCKET = "wss://stream.binance.com:9443/ws/ethusdt@kline_1m"
 
 RSI_PERIOD = 14
