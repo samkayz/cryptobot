@@ -36,7 +36,7 @@ EMAIL_HOST_PASSWORD = config('EMAIL_HOST_PASSWORD')
 EMAIL_PORT = config('EMAIL_PORT')
 EMAIL_FROM = config('EMAIL_FROM')
 DEFAULT_FROM_EMAIL = config('DEFAULT_FROM_EMAIL')
-EMAIL_USE_SSL = config('EMAIL_USE_SSL', default=False, cast=bool)
+# EMAIL_USE_SSL = config('EMAIL_USE_SSL', default=False, cast=bool)
 
 # Application definition
 
@@ -47,7 +47,11 @@ INSTALLED_APPS = [
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
+    'django.contrib.humanize',
+    'user',
 ]
+
+AUTH_USER_MODEL = 'user.User'
 
 MIDDLEWARE = [
     'django.middleware.security.SecurityMiddleware',
@@ -122,7 +126,7 @@ AUTH_PASSWORD_VALIDATORS = [
 
 LANGUAGE_CODE = 'en-us'
 
-TIME_ZONE = 'UTC'
+TIME_ZONE = 'Africa/Lagos'
 
 USE_I18N = True
 
